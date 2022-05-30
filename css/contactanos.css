@@ -1,0 +1,191 @@
+.grillasContactanos {
+    display: grid;
+    height: 100vh;
+    width: 100vw;
+    grid-template-columns: 100vw;
+    grid-template-rows: 1fr 7fr 2fr;
+    gap: 1px;
+    grid-template-areas:
+    "nav"
+    "formulario"
+    "footer";
+}
+
+@media screen and (min-width:807px) {
+    .grillasContactanos {
+        display: grid;
+        height: 100vh;
+        width: 100vw;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 7fr 2fr;
+        grid-template-areas:
+        "nav nav nav nav"
+        "form form form form"
+        "footer footer footer footer";
+    }
+
+    .form {
+        grid-area: form;
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+        background-image: url(../img/contact.png);
+        background-color: rgb(39, 39, 39);
+        background-blend-mode: soft-light;
+        width: 100vw;
+    }
+
+    .formTitulo {
+        padding-top: 4rem;
+    }
+
+    .formTitulo, .formSubtitulo, p {
+        text-align: left;
+        margin: 0.5rem 1rem ;
+        margin-right: 5rem;
+    }
+
+    .formTexto {
+        padding-bottom: 1rem;
+    }
+    
+    .formImput {
+        width: 100%;
+        order: -1;
+        margin: 3rem;
+        align-self: center;
+    }
+
+    .formButtons {
+        margin-left: -20%;
+    }
+    
+    .formButtonActivo {
+        grid-area: texto;
+        width: 30% !important;
+        text-decoration: none;
+        background-color: #FEF17F;
+        border-radius: 10px;
+        border: 0;
+        font-family: anton;
+        font-size: 1rem;
+        text-transform: uppercase;
+        color: black;
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.5));
+    }
+
+    .formButtonInactivo {
+        width: 30% !important;
+        text-decoration: none;
+        background-color: #ffffff;
+        border-radius: 10px;
+        border: 0;
+        font-family: anton;
+        font-size: 1rem;
+        text-transform: uppercase;
+        color: rgb(163, 163, 163);   
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.5));
+    }
+
+    h2 {
+        height: 3rem;
+    }
+
+    footer {
+        margin-top: 0;
+    }
+}
+
+.form {
+    grid-area: form;
+    font-family: poppins;
+    font-size: 1rem;
+    line-height: 1.6rem;
+    margin: 1rem 0 0 0;
+    text-align: center;
+}
+
+.bodyForm {
+    background-color: #35363A;
+}
+
+fieldset {
+    border: 0px;
+}
+
+.formTitulo {
+    font-family: anton;
+    font-size: 2rem;
+    letter-spacing: 4.5px;
+    color: #FEF17F;
+}
+
+.formSubtitulo {
+    color: white;
+    font-family: poppins;
+    font-size: 1rem;
+    letter-spacing: 0.9px;
+}
+
+.formTexto {
+    color: white;
+}
+
+input {
+    font-family: poppins;
+    text-transform: uppercase;
+    font-size: 1rem;
+    letter-spacing: 2px;
+    color: #969696;
+    width: 90%;
+    height: 2.5rem;
+    margin: 4px;
+    padding: 8px 16px;
+    border-radius: 10px;
+    border: 1px solid rgb(194, 194, 194);
+}
+
+textarea {
+    font-family: poppins;
+    text-transform: uppercase;
+    font-size: 1rem;
+    letter-spacing: 2px;
+    color: #969696;
+    width: 90%;
+    height: 8rem;
+    margin: 4px;
+    padding: 8px 16px;
+    border-radius: 10px;
+    border: 1px solid rgb(194, 194, 194);
+}
+
+.formButtons {
+   order: +1;
+}
+
+.formButtonActivo {
+    width: 90%;
+    text-decoration: none;
+    background-color: #FEF17F;
+    border-radius: 10px;
+    border: 0;
+    font-family: anton;
+    font-size: 1rem;
+    text-transform: uppercase;
+    color: black;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.5));
+    
+}
+
+.formButtonInactivo {
+    width: 90%;
+    text-decoration: none;
+    background-color: #ffffff;
+    border-radius: 10px;
+    border: 0;
+    font-family: anton;
+    font-size: 1rem;
+    text-transform: uppercase;
+    color: rgb(163, 163, 163);   
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.5));
+}
