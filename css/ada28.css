@@ -11,6 +11,16 @@
     "footer";
 }
 
+.ada28 {
+    grid-area: ada28;
+    display: flex;
+    flex-direction: column; 
+}
+
+.mapa {
+    width: 100%;
+}
+
 @media screen and (min-width:807px) {
     .grillas {
         display: grid;
@@ -23,17 +33,4 @@
         "ada28 ada28 ada28 ada28"
         "footer footer footer footer";
     }
-}
-.ada28 {
-    grid-area: ada28;
-    display: flex;
-    flex-direction: column; 
-}
-
-.imgProyecto {
-    width: 100%;
-}
-
-.mapa {
-    width: 100%;
 }
