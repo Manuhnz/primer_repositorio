@@ -89,16 +89,15 @@
     div .card-img-top {
         border-radius: 1rem 0 0 1rem;
         width: 50%;
-        height: 21.87rem;
         object-fit: cover;
         object-position: top left;
     }
 
-    .card-body {
-        padding: 0 1rem;
+    div .card-body {
+        padding: 2rem 1rem;
     }
 
-    .card-title {
+    div .card-title {
         font-family: anton;
         font-size: 1.4rem;
         line-height: 2rem;
