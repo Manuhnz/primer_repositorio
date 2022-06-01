@@ -4,7 +4,6 @@
     width: 100vw;
     grid-template-columns: 100vw;
     grid-template-rows: 1fr 7fr 2fr;
-    gap: 1px;
     grid-template-areas:
     "nav"
     "blog"
@@ -39,7 +38,7 @@
     display: none;
 }
 
-.btnActivo {
+.btnBlogActivo {
     bottom: 1.5rem;
     width: 8rem;
     text-decoration: none;
@@ -59,7 +58,7 @@
     transition: all 0.2s ease-in-out;
 }
 
-.btnActivo:hover {
+.btnBlogActivo:hover {
     color: black;
 }
 
@@ -109,7 +108,7 @@
         display: inline-block;
     }
 
-    .btnActivo:hover {
+    .btnBlogActivo:hover {
         color: black;
         background-color: #cec465;
         font-size: 1.1rem;

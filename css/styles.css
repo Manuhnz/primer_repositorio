@@ -10,7 +10,6 @@
     width: 100vw;
     grid-template-columns: 100vw;
     grid-template-rows: 1fr 3fr 2fr 2fr 2fr;
-    gap: 1px;
     grid-template-areas:
     "nav"
     "portada"
@@ -18,192 +17,6 @@
     "card"
     "footer";
 }
-
-@media screen and (min-width:807px) {
-    .grillasIndex {
-        display: grid;
-        height: 100vh;
-        width: 100vw;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-template-rows: 1fr 3fr 2fr 2fr 2fr;
-        grid-template-areas:
-        "nav nav nav nav"
-        "portada portada portada portada"
-        "poyecto proyecto proyecto proyecto"
-        "card card card card"
-        "footer footer footer footer";
-    }
-    
-    nav {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        justify-content: space-between;
-        align-items: flex-start;
-    }
-
-    .navIcono {
-        display: none;
-    }
-
-    .navMenu {
-        display: inline !important;
-    }
-
-    
-    li {
-        position: relative;
-        display: inline-block;
-        list-style: none;
-        padding: 0.5rem 0;
-        flex: auto;
-    }
-    
-    .navMenuItem {
-        font-family: poppins;
-        font-size: 1rem;
-        font-weight: 400;
-        display: inline-block;
-        text-transform: uppercase;
-        text-decoration: none;
-        color: white;
-        position: relative;
-        transition: all 0.6s ease;
-        top: -0.5rem;
-    }
-    
-    .navMenuItem::after {
-        content: "";
-        position: absolute;
-        height: 2px;
-        background-color: #FEF17F;
-        width: 0;
-        left: 50%;
-        bottom: -16px;
-        transform: translateX(-50%);
-        transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55) all;
-    }
-    
-    .navMenuItem:hover {
-        color: #FEF17F;
-    }
-    
-    .navMenuItem:hover::after {
-        width: 100%;
-    }
-    
-    .portada {
-        grid-area: portada;
-        display: flex;
-        flex-direction: column;
-        position: relative;
-        justify-content: space-between;
-        width: 100vw;
-        height: 30rem;
-        background-image: url(../img/ADA\ 28\ -\ Exterior\ 1.jpg);
-        background-position: top; 
-        background-size: cover;
-
-    }
-
-    .portadaImagen {
-        display: none;
-    }
-        
-    .portadaTitle {
-        position: absolute;
-        right: 0;
-        top: 0;
-        width: 27rem;
-        color: #FEF17F;
-        text-align: left;
-        text-transform: uppercase;
-        background-color: #202124;
-        padding-top: 2.5rem !important;
-    }
-
-    .portadaTitulo {
-        font-family: anton;
-        font-weight: 100;  
-        font-size: 2.87rem;
-        letter-spacing: 2px;
-        padding-bottom: 1rem;
-    }
-
-    .portadaSubtitulo {
-        font-family: anton;
-        font-weight: 100;  
-        letter-spacing: 1.5px;  
-        font-size: 2rem;
-    }
-
-    .portadaTexto {
-        position: absolute;
-        background-color: #35363A;
-        color: white;
-        right: -1rem;
-        bottom: -2rem;
-        top: 7rem ;
-        width: 27rem;
-        padding: 1rem 3rem 0 3rem;
-    }   
-
-    .blanco {
-        color: white;
-        text-align: left;
-    }
-
-        
-    .proyecto {
-        grid-area: proyecto;
-        background-color: white !important;
-        margin: 2rem 0;
-    }
-
-    .proyectoTexto {
-        padding: 0 2rem;
-        text-align: center;
-        color: black;
-    }
-
-    .hide {
-        display: block !important;
-    }
-
-
-    .card {
-        grid-area: card;
-        display: flex;
-        flex-direction: row !important;
-        justify-content: space-between;
-        position: relative;
-        width: 100%;
-    }
-
-    .card1 {
-        padding: 1rem;
-        align-self: center;
-        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.5));
-    }
-    .card2 {
-        padding: 1rem;
-        align-self: center;
-        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.5));
-    }
-
-    .centrarBoton {
-        display: flex;
-        position: relative;
-        align-items: center;
-        justify-content: center;
-    }
-    .cardImagen {
-        width: 100%;
-        border-radius: 0 0 1rem 1rem;
-        align-self: center;
-    }
-}
-
 
 body {
     display: grid;
@@ -389,24 +202,13 @@ nav ul li {
   display: none;
 }
 
-.img {
-    border-radius: 0.5rem;
-    margin: 0.5;
-}
-
-.mapa {
-    width: 100%;
-    height: 20rem;
-    border-radius: 0.5rem;
-    margin: 2rem 0;
-}
-
 .card {
     grid-area: card;
     display: flex;
     flex-direction: column;
     padding: 2rem 1rem 0 1rem;
-    align-items: center;
+    width: 100%;
+    
 }
 
 .card1, .card2 {
@@ -415,6 +217,7 @@ nav ul li {
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.5));
     animation: fadeIn;
     animation-duration: 2s;
+    width: 90%;
 }
 
 .centrarBoton {
@@ -429,11 +232,12 @@ nav ul li {
     align-self: center;
 }
 
-.activo {
+.btnActivo {
     position: absolute;
     align-content: space-around;
     width: 8rem;
     text-decoration: none;
+    text-align: center;
     padding: 1rem;
     background-color: #FEF17F;
     border-radius: 10px;
@@ -445,13 +249,14 @@ nav ul li {
     margin:auto;
     display:block;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.5));
-    
+    transition: all 0.2s ease-in-out;
 }
 
-.inactivo {
+.btnInactivo {
     position: absolute;
     width: 8rem;
     text-decoration: none;
+    text-align: center;
     padding: 1rem;
     background-color: #ffffff;
     border-radius: 10px;
@@ -465,13 +270,21 @@ nav ul li {
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.5));
 }
 
+.btnActivo:hover {
+    color: black;
+}
+
+.btnInactivo:hover {
+    color: rgb(163, 163, 163);
+}
+
 footer {
     grid-area: footer;
     width: 100vw;
     height: 15rem;
     background-color: #202124;
     color: white;
-    margin-top: 4rem;
+    margin-top: 5rem;
     text-align: center;
     filter: drop-shadow(0px -4px 4px rgba(0, 0, 0, 0.5));
     z-index: 1;
@@ -496,3 +309,198 @@ address {
     background-color: #202124;
 }
 
+@media screen and (min-width:807px) {
+    .grillasIndex {
+        display: grid;
+        height: 100vh;
+        width: 100vw;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 3fr 2fr 2fr 2fr;
+        grid-template-areas:
+        "nav nav nav nav"
+        "portada portada portada portada"
+        "poyecto proyecto proyecto proyecto"
+        "card card card card"
+        "footer footer footer footer";
+    }
+    
+    nav {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    .navIcono {
+        display: none;
+    }
+
+    .navMenu {
+        display: inline !important;
+    }
+
+    li {
+        position: relative;
+        display: inline-block;
+        list-style: none;
+        padding: 0.5rem 0;
+        flex: auto;
+    }
+    
+    .navMenuItem {
+        font-family: poppins;
+        font-size: 1rem;
+        font-weight: 400;
+        display: inline-block;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: white;
+        position: relative;
+        transition: all 0.6s ease;
+        top: -0.5rem;
+    }
+    
+    .navMenuItem::after {
+        content: "";
+        position: absolute;
+        height: 2px;
+        background-color: #FEF17F;
+        width: 0;
+        left: 50%;
+        bottom: -16px;
+        transform: translateX(-50%);
+        transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55) all;
+    }
+    
+    .navMenuItem:hover {
+        color: #FEF17F;
+    }
+    
+    .navMenuItem:hover::after {
+        width: 100%;
+    }
+    
+    .portada {
+        grid-area: portada;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        justify-content: space-between;
+        width: 100vw;
+        height: 30rem;
+        background-image: url(../img/ADA\ 28\ -\ Exterior\ 1.jpg);
+        background-position: top; 
+        background-size: cover;
+
+    }
+
+    .portadaImagen {
+        display: none;
+    }
+        
+    .portadaTitle {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 27rem;
+        color: #FEF17F;
+        align-content: center;
+        text-transform: uppercase;
+        background-color: #35363A;
+        padding-top: 2.5rem;
+    }
+
+    .portadaTitulo {
+        font-family: anton;
+        font-weight: 100;  
+        font-size: 2.2rem;
+        letter-spacing: 2px;
+        padding: 2rem 1rem 1rem 3rem;
+        text-align: left;
+    }
+
+    .portadaSubtitulo {
+        font-family: anton;
+        font-weight: 100;  
+        letter-spacing: 1px;  
+        font-size: 1.8rem;
+        padding-left: 2rem;
+        text-align: left;
+    }
+
+    .portadaTexto {
+        position: absolute;
+        background-color: #35363A;
+        color: white;
+        right: -1rem;
+        bottom: -2rem;
+        top: 7rem ;
+        width: 27rem;
+        padding: 1.5rem 3rem 0 2.5rem;
+    }   
+
+    .blanco {
+        color: white;
+        text-align: left;
+    }
+
+        
+    .proyecto {
+        grid-area: proyecto;
+        background-color: white !important;
+        margin: 4rem 0 0 0;
+    }
+
+    .proyectoTexto {
+        padding: 0 2rem;
+        text-align: center;
+        color: black;
+    }
+
+    .hide {
+        display: block !important;
+    }
+
+
+    .card {
+        grid-area: card;
+        display: flex;
+        flex-direction: row !important;
+        justify-content: space-between;
+        position: relative;
+        width: 100%;
+    }
+
+    .card1 {
+        padding: 1rem;
+        align-self: center;
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.5));
+        width: 50%;
+    }
+
+    .card2 {
+        padding: 1rem;
+        align-self: center;
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.5));
+        width: 50%;
+    }
+
+    .centrarBoton {
+        display: flex;
+        position: relative;
+        align-items: center;
+        justify-content: center;
+    }
+    .cardImagen {
+        width: 100%;
+        border-radius: 0 0 1rem 1rem;
+        align-self: center;
+    }
+
+    .btnActivo:hover {
+        color: black;
+        background-color: #cec465;
+        font-size: 1.1rem;
+    }
+}
