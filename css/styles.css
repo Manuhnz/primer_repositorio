@@ -198,10 +198,6 @@ nav ul li {
     text-align: center;
 }
 
-.hide {
-  display: none;
-}
-
 .card {
     grid-area: card;
     display: flex;
@@ -337,7 +333,7 @@ address {
     }
 
     .navMenu {
-        display: inline !important;
+        display: inline;
     }
 
     li {
