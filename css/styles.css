@@ -1,6 +1,8 @@
 * {
     margin: 0;
     padding: 0;
+    text-decoration: none;
+    list-style: none;
     box-sizing: border-box;
 }
 
@@ -24,88 +26,14 @@ body {
     width: 100vw;
 }
 
-main {
-    padding-top: 5.25rem;   
-}
-
-h2 {
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-family: anton;
-    font-size: 1.25rem;
-    color: white;
-    background-color: #35363A;
-    background-blend-mode: soft-light;
-    font-weight: 100;
-    text-align: center;
-    padding: 1rem 2rem;
-    letter-spacing: 2px;
-}
-
-h3 {
-    text-transform: uppercase;
-    font-family: poppins; 
-    font-weight: 400;
-    font-size: 0.87rem;
-    text-align: center;
-    padding: 1rem 0;
-}
-
-h4 {
-    text-transform: uppercase;
-    font-family: poppins;
-    font-weight: 400;
-    font-size: 0.80rem;
-    text-align: center;
-}
-
-h5 {
-    font-family: poppins;
-    font-size: 1.2rem;
-    font-weight: 500;
-    text-align: center;
-    padding: 1rem;
-    background-color: #ffffff;
-    border-radius: 1rem 1rem 0 0;
-    width: 100%;
-}
-
-h6 {
-    font-family: poppins;
-    font-size: 0.87rem;
-    line-height: 1.6rem;
-    font-weight: 400;
-    margin: 1rem;
-    text-align: center;
-}
-
-p {
-    font-family: poppins;
-    font-size: 0.87rem;
-    line-height: 1.6rem;
-    font-weight: 400;
-    margin: 1rem;
-    text-align: center;
-}
-
 header {
     height:5.25rem;
     width: 100vw;
     background-color: #202124;
     position: fixed;
-    border-bottom: 2px solid white;
     align-items: center;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.5));
     z-index: 3;
-}
-
-header .nav {
-    grid-area: nav;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    align-items: center;
 }
 
 .navLogo {
@@ -116,36 +44,66 @@ header .nav {
     animation-duration: 2s;
 }
 
+nav {
+    height:5.25rem;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .navIcono {
-    background-color: #202124;
+    font-size: 1.5rem;
     color: white;
-    padding: 1rem;
-    margin: 0 2rem;
+    margin-right: 1rem;
+    cursor: pointer;
 }
 
 .navMenu {
+    position: fixed;
+    width: 100%;
+    height: 0vh;
+    top: 5.25rem;
+    background-color: #202124;
+    padding-left: 1rem;
+    border-bottom: white solid 2px;
+    transition: all .5s;
+}
+
+.navMenu li {
+    display: none;
+    line-height: 2rem;
+    padding: 1rem;
+    transition: all .5s;
+}
+
+.navMenu li a {
+     color: white;
+     text-transform: uppercase;
+     font-family: poppins;
+     font-weight: 400;
+}
+
+.navMenu li a.activo {
+    color: #FEF17F;
+    font-weight: 500;
+    transition: .3s;
+}
+
+#check {
     display: none;
 }
 
-nav ul {
-    padding: 2rem;
+#check:checked ~ .navMenu {
+    height: 21rem;
 }
 
-nav ul li {
-    position: relative;
-    display: inline-block;
-    padding: 0.5rem;
-    flex: auto;
+#check:checked ~ .navMenu li {
+    display: block;
 }
 
-.navMenuItem {
-    font-family: poppins; 
-    text-transform: uppercase;
-    list-style: none;
-    text-decoration: none;
-    color: white;
-    font-size: 1rem;
-    position: relative;
+main {
+    padding-top: 5.25rem;   
 }
 
 .portada {
@@ -274,6 +232,68 @@ nav ul li {
     color: rgb(163, 163, 163);
 }
 
+
+h2 {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-family: anton;
+    font-size: 1.25rem;
+    color: white;
+    background-color: #35363A;
+    background-blend-mode: soft-light;
+    font-weight: 100;
+    text-align: center;
+    padding: 1rem 2rem;
+    margin: 0;
+    letter-spacing: 2px;
+}
+
+h3 {
+    text-transform: uppercase;
+    font-family: poppins; 
+    font-weight: 400;
+    font-size: 0.87rem;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+h4 {
+    text-transform: uppercase;
+    font-family: poppins;
+    font-weight: 400;
+    font-size: 0.80rem;
+    text-align: center;
+}
+
+h5 {
+    font-family: poppins;
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-align: center;
+    padding: 1rem;
+    background-color: #ffffff;
+    border-radius: 1rem 1rem 0 0;
+    width: 100%;
+}
+
+h6 {
+    font-family: poppins;
+    font-size: 0.87rem;
+    line-height: 1.6rem;
+    font-weight: 400;
+    margin: 1rem;
+    text-align: center;
+}
+
+p {
+    font-family: poppins;
+    font-size: 0.87rem;
+    line-height: 1.6rem;
+    font-weight: 400;
+    margin: 1rem;
+    text-align: center;
+}
+
 footer {
     grid-area: footer;
     width: 100vw;
@@ -320,44 +340,42 @@ address {
         "footer footer footer footer";
     }
     
+    header {
+        border-bottom: 2px solid white;
+    }
+    
     nav {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        justify-content: space-between;
-        align-items: flex-start;
+        height: 5.25rem;
     }
 
     .navIcono {
         display: none;
-    }
+    }    
 
     .navMenu {
-        display: inline;
+        position: relative;
+        height: 5.25rem;
+        top: 0;
+        background-color: none;
+        transition: none;
+        text-align: right;
+        padding-right: 1rem;
     }
 
-    li {
-        position: relative;
+    .navMenu li {
         display: inline-block;
-        list-style: none;
-        padding: 0.5rem 0;
-        flex: auto;
+        line-height: 4rem;
+        transition: none;
     }
-    
-    .navMenuItem {
-        font-family: poppins;
-        font-size: 1rem;
-        font-weight: 400;
-        display: inline-block;
-        text-transform: uppercase;
+
+    .navMenu li a {
         text-decoration: none;
-        color: white;
         position: relative;
         transition: all 0.6s ease;
         top: -0.5rem;
     }
     
-    .navMenuItem::after {
+    .navMenu li a::after {
         content: "";
         position: absolute;
         height: 2px;
@@ -369,11 +387,11 @@ address {
         transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55) all;
     }
     
-    .navMenuItem:hover {
+    .navMenu li a:hover {
         color: #FEF17F;
     }
     
-    .navMenuItem:hover::after {
+    .navMenu li a:hover::after {
         width: 100%;
     }
     
