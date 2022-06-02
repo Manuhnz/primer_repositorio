@@ -82,6 +82,7 @@ nav {
      text-transform: uppercase;
      font-family: poppins;
      font-weight: 400;
+     text-decoration: none;
 }
 
 .navMenu li a.activo {
@@ -103,7 +104,7 @@ nav {
 }
 
 main {
-    padding-top: 5.25rem;   
+    padding-top: 5.25rem;  
 }
 
 .portada {
@@ -135,9 +136,12 @@ main {
     font-size: 1.5rem;
 }
 
-.portadaImagen {
+
+.portadaImg {
     width: 100%;
-    
+    object-fit: contain;
+    object-position: left;
+    z-index: 0;
 }
 
 .portadaTexto {
@@ -157,13 +161,16 @@ main {
     text-align: center;
 }
 
+section.card {
+    border: 0;
+}
+
 .card {
     grid-area: card;
     display: flex;
     flex-direction: column;
     padding: 2rem 1rem 0 1rem;
-    width: 100%;
-    
+    width: 100%;    
 }
 
 .card1, .card2 {
@@ -275,6 +282,7 @@ h5 {
     background-color: #ffffff;
     border-radius: 1rem 1rem 0 0;
     width: 100%;
+    margin: 0;
 }
 
 h6 {
@@ -348,6 +356,10 @@ address {
     nav {
         height: 5.25rem;
     }
+    
+    .navAlineado {
+        height: 6.25rem;
+    }
 
     .navIcono {
         display: none;
@@ -404,14 +416,11 @@ address {
         justify-content: space-between;
         width: 100vw;
         height: 30rem;
-        background-image: url(../img/ADA\ 28\ -\ Exterior\ 1.jpg);
-        background-position: bottom left; 
-        background-size: contain;
-        background-repeat: no-repeat;
     }
 
-    .portadaImagen {
-        display: none;
+    .portadaImg {
+        width: 100%;
+        height: 30rem;
     }
         
     .portadaTitle {
@@ -424,6 +433,7 @@ address {
         text-transform: uppercase;
         background-color: #35363A;
         padding-top: 2.5rem;
+        z-index: 1;
     }
 
     .portadaTitulo {

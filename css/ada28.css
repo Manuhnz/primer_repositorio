@@ -16,10 +16,6 @@
     flex-direction: column; 
 }
 
-.navMenu li a {
-    text-decoration: none;
-}
-
 .carouselImg {
     width: 100%;
 }
@@ -41,13 +37,5 @@
         "nav nav nav nav"
         "ada28 ada28 ada28 ada28"
         "footer footer footer footer";
-    }
-
-    .navMenu {
-        height: 6.25rem;
-    }
-
-    .navMenu li {
-        line-height: 5.80rem;
     }
 }

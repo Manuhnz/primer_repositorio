@@ -16,10 +16,6 @@
     flex-direction: column;
 }
 
-.navMenu li a {
-    text-decoration: none;
-}
-
 .card {
     display: flex;
     flex-direction: column;
@@ -81,14 +77,6 @@
         "footer footer footer footer";
     }
 
-    .navMenu {
-        height: 6.25rem;
-    }
-    
-    .navMenu li {
-        line-height: 5.80rem;
-    }
-        
     .card {
         display: flex;
         flex-direction: row;
