@@ -137,6 +137,7 @@ main {
 
 .portadaImagen {
     width: 100%;
+    
 }
 
 .portadaTexto {
@@ -404,9 +405,9 @@ address {
         width: 100vw;
         height: 30rem;
         background-image: url(../img/ADA\ 28\ -\ Exterior\ 1.jpg);
-        background-position: top; 
-        background-size: cover;
-
+        background-position: bottom left; 
+        background-size: contain;
+        background-repeat: no-repeat;
     }
 
     .portadaImagen {
