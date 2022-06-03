@@ -357,6 +357,10 @@ address {
         height: 5.25rem;
     }
     
+    .centrarLogo {
+        margin-bottom: 1rem;
+    }
+
     .navAlineado {
         height: 6.25rem;
     }
