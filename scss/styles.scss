@@ -1,0 +1,226 @@
+@import "nav";
+@import "footer";
+@import "cards";
+@import "variables";
+
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+.grillasIndex {
+    display: grid;
+    height: 100vh;
+    width: 100vw;
+    grid-template-columns: 100vw;
+    grid-template-rows: 1fr 3fr 2fr 2fr 2fr;
+    grid-template-areas:
+        "nav"
+        "portada"
+        "proyecto"
+        "card"
+        "footer";
+
+    @media screen and (min-width:#{$desktop}) {
+        display: grid;
+        height: 100vh;
+        width: 100vw;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 3fr 2fr 2fr 2fr;
+        grid-template-areas:
+            "nav nav nav nav"
+            "portada portada portada portada"
+            "poyecto proyecto proyecto proyecto"
+            "card card card card"
+            "footer footer footer footer";
+    }
+}
+
+body {
+    display: grid;
+    background-color: $color-fondo;
+    width: 100vw;
+
+    main {
+        padding-top: 5.25rem;
+
+        .portada {
+            grid-area: portada;
+
+            @media screen and (min-width:#{$desktop}) {
+                grid-area: portada;
+                display: flex;
+                flex-direction: column;
+                position: relative;
+                justify-content: space-between;
+                width: 100vw;
+                height: 30rem;
+            }
+
+            .portadaTitle {
+                color: $color-acento;
+                background-color: $color-secundario;
+                text-align: center;
+                text-transform: uppercase;
+                padding: 0.5rem 0;
+
+                @media screen and (min-width:#{$desktop}) {
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    width: 27rem;
+                    color: #FEF17F;
+                    align-content: center;
+                    text-transform: uppercase;
+                    background-color: #35363A;
+                    padding-top: 2.5rem;
+                    z-index: 1;
+                }
+
+                .portadaTitulo {
+                    font-family: anton;
+                    font-weight: 100;
+                    font-size: 2rem;
+                    letter-spacing: 2px;
+                    line-height: 15px;
+                    padding-top: 2.5rem;
+
+                    @media screen and (min-width:#{$desktop}) {
+                        font-family: anton;
+                        font-weight: 100;
+                        font-size: 2.2rem;
+                        letter-spacing: 2px;
+                        padding: 2rem 1rem 1rem 3rem;
+                        text-align: left;
+                    }
+                }
+
+                .portadaSubtitulo {
+                    font-family: anton;
+                    font-weight: 100;
+                    letter-spacing: 2.2px;
+                    font-size: 1.5rem;
+
+                    @media screen and (min-width:#{$desktop}) {
+                        font-family: anton;
+                        font-weight: 100;
+                        letter-spacing: 1px;
+                        font-size: 1.8rem;
+                        padding-left: 2rem;
+                        text-align: left;
+                    }
+                }
+            }
+
+            .portadaImg {
+                width: 100vw;
+                object-fit: contain;
+                object-position: left;
+                z-index: 0;
+
+                @media screen and (min-width:#{$desktop}) {
+                    width: 100vw;
+                    height: 30rem;
+                }
+            }
+
+            .portadaTexto {
+                color: $color-negro;
+                text-align: center;
+                margin: 2rem 1rem;
+
+                @media screen and (min-width:#{$desktop}) {
+                    position: absolute;
+                    background-color: #35363A;
+                    color: white;
+                    right: -1rem;
+                    bottom: -2rem;
+                    top: 7rem;
+                    width: 27rem;
+                    padding: 1.5rem 3rem 0 2.5rem;
+                }
+            }
+        }
+
+        .proyecto {
+            grid-area: proyecto;
+
+            background-color: $color-primario;
+            background-blend-mode: soft-light;
+            background-size: cover;
+            color: $color-blanco;
+            padding: 1rem;
+            text-align: center;
+
+            @media screen and (min-width:#{$desktop}) {
+                background-color: $color-fondo;
+
+                .proyectoTextos {
+                    grid-area: proyecto;
+                    margin: 4rem 0 0 0;
+                    color: $color-negro;
+                }
+            }
+
+            h3 {
+                text-transform: uppercase;
+                font-family: anton;
+                letter-spacing: 2px;
+                font-weight: 400;
+                font-size: 1rem;
+                text-align: center;
+                padding: 1rem 0;
+                border-bottom: $color-acento solid 2px;
+
+                @media screen and (min-width:#{$desktop}) {
+                    border-bottom: none;
+                }
+            }
+
+            .hide {
+                display: none;
+
+                @media screen and (min-width:#{$desktop}) {
+                    display: block;
+                }
+            }
+        }
+
+        h2 {
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-family: anton;
+            font-size: 1.25rem;
+            color: $color-blanco;
+            background-color: $color-secundario;
+            background-blend-mode: soft-light;
+            font-weight: 100;
+            text-align: center;
+            padding: 1rem 2rem;
+            margin: 0;
+            letter-spacing: 2px;
+        }
+
+        h6 {
+            font-family: poppins;
+            font-size: 0.87rem;
+            line-height: 1.6rem;
+            font-weight: 400;
+            margin: 1rem;
+            text-align: center;
+        }
+
+        p {
+            font-family: poppins;
+            font-size: 0.87rem;
+            line-height: 1.6rem;
+            font-weight: 400;
+            margin: 1rem;
+            text-align: center;
+        }
+    }
+}

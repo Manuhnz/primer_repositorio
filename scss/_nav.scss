@@ -1,0 +1,139 @@
+@import "variables";
+
+header {
+    height: 5.25rem;
+    width: 100vw;
+    background-color: $color-primario;
+    position: fixed;
+    align-items: center;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.5));
+    z-index: 3;
+
+    @media screen and (min-width:#{$desktop}) {
+        border-bottom: 2px solid white;
+
+        .centrarLogo {
+            margin-bottom: 1rem;
+        }
+
+        .navAlineado {
+            height: 6.25rem;
+        }
+    }
+
+    nav {
+        height: 5.25rem;
+        width: 100vw;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .navLogo {
+            width: 10rem;
+            padding: 1rem;
+            margin-left: 1rem;
+            animation: fadeIn;
+            animation-duration: 2s;
+        }
+
+        .navIcono {
+            font-size: 1.5rem;
+            color: white;
+            margin-right: 1rem;
+            cursor: pointer;
+
+            @media screen and (min-width:#{$desktop}) {
+                display: none;
+            }
+        }
+
+        .navMenu {
+            position: fixed;
+            width: 100%;
+            height: 0vh;
+            top: 5.25rem;
+            background-color: #202124;
+            padding-left: 1rem;
+            border-bottom: white solid 2px;
+            transition: all .3s ease-in-out;
+
+            @media screen and (min-width:#{$desktop}) {
+                position: relative;
+                height: 5.25rem;
+                top: 0;
+                background-color: none;
+                transition: none;
+                text-align: right;
+                padding-right: 1rem;
+            }
+
+            li {
+                display: none;
+                line-height: 2rem;
+                padding: 1rem;
+                transition: all 4s;
+
+                @media screen and (min-width:#{$desktop}) {
+                    display: inline-block;
+                    line-height: 4rem;
+                    transition: none;
+                }
+
+                a {
+                    color: white;
+                    text-transform: uppercase;
+                    font-family: poppins;
+                    font-weight: 400;
+                    text-decoration: none;
+
+                    @media screen and (min-width:#{$desktop}) {
+                        text-decoration: none;
+                        position: relative;
+                        transition: all 0.6s ease;
+                        top: -0.5rem;
+
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            height: 2px;
+                            background-color: #FEF17F;
+                            width: 0;
+                            left: 50%;
+                            bottom: -16px;
+                            transform: translateX(-50%);
+                            transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55) all;
+                        }
+
+                        &:hover {
+                            color: #FEF17F;
+                        }
+
+                        &:hover::after {
+                            width: 100%;
+                        }
+                    }
+                }
+
+                .activo {
+                    color: $color-acento;
+                    font-weight: 500;
+                    transition: .3s;
+                }
+            }
+        }
+
+        #check {
+            display: none;
+        }
+
+        #check:checked~.navMenu {
+            height: 21rem;
+
+            li {
+                display: block;
+            }
+        }
+
+
+    }
+}
