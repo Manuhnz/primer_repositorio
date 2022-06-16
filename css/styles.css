@@ -128,6 +128,12 @@ body footer {
     padding-bottom: 1rem;
     background-color: #202124; }
 
+.footerForm {
+  margin-top: 8rem; }
+  @media screen and (min-width: 810px) {
+    .footerForm {
+      margin-top: 0; } }
+
 .card {
   border: 0;
   margin-top: 2rem;
@@ -143,7 +149,6 @@ body footer {
   .card .card1,
   .card .card2 {
     padding: 1rem;
-    align-self: center;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.5));
     animation: fadeIn;
     animation-duration: 2s;
@@ -199,8 +204,7 @@ body footer {
         @media screen and (min-width: 810px) {
           .card .card1 .centrarBoton .btnActivo:hover,
           .card .card2 .centrarBoton .btnActivo:hover {
-            background-color: #b7ad5a;
-            color: #000000; } }
+            background-color: #b7ad5a; } }
       .card .card1 .centrarBoton .btnInactivo,
       .card .card2 .centrarBoton .btnInactivo {
         position: absolute;
@@ -226,6 +230,14 @@ body footer {
   grid-template-columns: 100vw;
   grid-template-rows: 1fr 7fr 2fr;
   grid-template-areas: "nav" "blog" "footer"; }
+  @media screen and (min-width: 810px) {
+    .grillasBlog .grillasBlog {
+      display: grid;
+      height: 100vh;
+      width: 100vw;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr 7fr 2fr;
+      grid-template-areas: "nav nav nav nav" "blog blog blog blog" "footer footer footer footer"; } }
   .grillasBlog .blog {
     grid-area: blog;
     display: flex;
@@ -293,12 +305,178 @@ body footer {
         .grillasBlog .blog .card .btnBlogActivo:hover {
           background-color: #b7ad5a; }
 
+.grillasContactanos {
+  display: grid;
+  height: 100vh;
+  width: 100vw;
+  grid-template-columns: 100vw;
+  grid-template-rows: 1fr 7fr 2fr;
+  grid-template-areas: "nav" "formulario" "footer"; }
+  @media screen and (min-width: 810px) {
+    .grillasContactanos .grillasContactanos {
+      display: grid;
+      height: 100vh;
+      width: 100vw;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 7fr 2fr;
+      grid-template-areas: "nav nav nav nav" "form form form form" "footer footer footer footer"; } }
+
+.bodyForm {
+  background-color: #35363A; }
+  .bodyForm h2 {
+    display: none; }
+    @media screen and (min-width: 810px) {
+      .bodyForm h2 {
+        display: block;
+        height: 3rem; } }
+  .bodyForm fieldset {
+    grid-area: form;
+    font-family: poppins;
+    font-size: 1rem;
+    line-height: 1.6rem;
+    margin: 1rem 0 0 0;
+    text-align: center;
+    border: 0px; }
+    @media screen and (min-width: 810px) {
+      .bodyForm fieldset {
+        grid-area: form;
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+        background-image: url(../img/contact.png);
+        background-color: #272727;
+        background-blend-mode: soft-light;
+        background-size: cover;
+        width: 100vw; } }
+    .bodyForm fieldset .formTitulo {
+      font-family: anton;
+      font-size: 2rem;
+      font-weight: 400;
+      text-transform: uppercase;
+      letter-spacing: 4.5px;
+      color: #FEF17F;
+      margin-top: 3rem; }
+      @media screen and (min-width: 810px) {
+        .bodyForm fieldset .formTitulo {
+          text-align: left;
+          margin-top: 5rem;
+          margin-left: 1rem;
+          margin-bottom: 1rem; } }
+    .bodyForm fieldset .formSubtitulo {
+      color: white;
+      font-family: poppins;
+      text-transform: uppercase;
+      font-weight: 200;
+      font-size: 1rem;
+      margin-top: 1rem;
+      letter-spacing: 0.9px; }
+      @media screen and (min-width: 810px) {
+        .bodyForm fieldset .formSubtitulo {
+          text-align: left;
+          margin: 0 1rem;
+          margin-right: 5rem; } }
+    .bodyForm fieldset .formTexto {
+      color: white;
+      padding: 0 3rem; }
+      @media screen and (min-width: 810px) {
+        .bodyForm fieldset .formTexto {
+          padding: 1rem 0; } }
+    @media screen and (min-width: 810px) {
+      .bodyForm fieldset p {
+        text-align: left;
+        margin: 0 1rem;
+        margin-right: 5rem; } }
+    .bodyForm fieldset .btnForm {
+      position: relative;
+      bottom: -17.7rem;
+      align-self: center;
+      width: 100%; }
+      @media screen and (min-width: 810px) {
+        .bodyForm fieldset .btnForm {
+          text-align: left;
+          margin-left: 0.8rem;
+          position: relative;
+          bottom: 0; } }
+      .bodyForm fieldset .btnForm .btnFormActivo {
+        width: 80%;
+        height: 2.5rem;
+        text-decoration: none;
+        background-color: #FEF17F;
+        border-radius: 10px;
+        border: 0;
+        font-family: anton;
+        font-size: 1rem;
+        text-transform: uppercase;
+        color: black;
+        margin-bottom: 0.5rem;
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.5)); }
+        @media screen and (min-width: 810px) {
+          .bodyForm fieldset .btnForm .btnFormActivo {
+            width: 30%;
+            margin-right: 0.5rem; }
+            .bodyForm fieldset .btnForm .btnFormActivo:hover {
+              background-color: #b7ad5a; } }
+      .bodyForm fieldset .btnForm .btnFormInactivo {
+        width: 80%;
+        height: 2.5rem;
+        text-decoration: none;
+        background-color: #ffffff;
+        border-radius: 10px;
+        border: 0;
+        font-family: anton;
+        font-size: 1rem;
+        text-transform: uppercase;
+        color: #a3a3a3;
+        margin-bottom: 0.5rem;
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.5)); }
+        @media screen and (min-width: 810px) {
+          .bodyForm fieldset .btnForm .btnFormInactivo {
+            width: 30%; } }
+    .bodyForm fieldset .formImput {
+      margin-bottom: 3rem;
+      margin-top: -6rem; }
+      @media screen and (min-width: 810px) {
+        .bodyForm fieldset .formImput {
+          width: 100%;
+          order: -1;
+          margin: 3rem;
+          align-self: center; } }
+      .bodyForm fieldset .formImput input {
+        font-family: poppins;
+        text-transform: uppercase;
+        font-size: 1rem;
+        letter-spacing: 2px;
+        color: #969696;
+        width: 80%;
+        height: 2.5rem;
+        margin: 4px;
+        padding: 8px 16px;
+        border-radius: 10px;
+        border: 1px solid #c2c2c2; }
+      .bodyForm fieldset .formImput textarea {
+        font-family: poppins;
+        text-transform: uppercase;
+        font-size: 1rem;
+        letter-spacing: 2px;
+        color: #969696;
+        width: 80%;
+        height: 8rem;
+        margin: 4px;
+        padding: 8px 16px;
+        border-radius: 10px;
+        border: 1px solid #c2c2c2; }
+
 * {
   margin: 0;
   padding: 0;
   text-decoration: none;
   list-style: none;
   box-sizing: border-box; }
+
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0; }
 
 .grillasIndex {
   display: grid;
@@ -444,7 +622,7 @@ body {
       background-blend-mode: soft-light;
       font-weight: 100;
       text-align: center;
-      padding: 1rem 2rem;
+      padding: 1rem 3rem;
       margin: 0;
       letter-spacing: 2px; }
     body main h6 {
@@ -461,3 +639,67 @@ body {
       font-weight: 400;
       margin: 1rem;
       text-align: center; }
+
+.grillasProyectos {
+  display: grid;
+  height: 100vh;
+  width: 100vw;
+  grid-template-columns: 100vw;
+  grid-template-rows: 1fr 7fr 2fr;
+  grid-template-areas: "nav" "card" "footer"; }
+  @media screen and (min-width: 810px) {
+    .grillasProyectos .grillasProyectos {
+      display: grid;
+      height: 100vh;
+      width: 100vw;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr 7fr 2fr;
+      grid-template-areas: "nav nav nav nav" "card card card card" "footer footer footer footer"; } }
+
+.grillasNosotros {
+  display: grid;
+  height: 100vh;
+  width: 100vw;
+  grid-template-columns: 100vw;
+  grid-template-rows: 1fr 7fr 2fr;
+  grid-template-areas: "nav" "nosotros" "footer"; }
+  @media screen and (min-width: 810px) {
+    .grillasNosotros .grillasNosotros {
+      display: grid;
+      height: 100vh;
+      width: 100vw;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr 7fr 2fr;
+      grid-template-areas: "nav nav nav nav" "nosotros nosotros nosotros nosotros" "footer footer footer footer"; } }
+  .grillasNosotros .nosotros {
+    grid-area: nosotros;
+    width: 100vw;
+    height: 100%; }
+    .grillasNosotros .nosotros .nosotrosImagen {
+      width: 100%; }
+
+.grillasAda28 {
+  display: grid;
+  height: 100vh;
+  width: 100vw;
+  grid-template-columns: 100vw;
+  grid-template-rows: 1fr 7fr 2fr;
+  grid-template-areas: "nav" "ada28" "footer"; }
+  @media screen and (min-width: 810px) {
+    .grillasAda28 .grillasAda28 {
+      display: grid;
+      height: 100vh;
+      width: 100vw;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr 7fr 2fr;
+      grid-template-areas: "nav nav nav nav" "ada28 ada28 ada28 ada28" "footer footer footer footer"; } }
+  .grillasAda28 .ada28 {
+    grid-area: ada28;
+    display: flex;
+    flex-direction: column; }
+    .grillasAda28 .ada28 .carouselImg {
+      width: 100%; }
+    .grillasAda28 .ada28 .mapa {
+      width: 100%;
+      height: 20rem;
+      margin: 1rem 0; }

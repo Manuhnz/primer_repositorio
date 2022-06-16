@@ -1,8 +1,10 @@
 @import "nav";
 @import "footer";
 @import "cards";
+@import "formulario";
 @import "variables";
 
+//index//
 
 * {
     margin: 0;
@@ -10,6 +12,12 @@
     text-decoration: none;
     list-style: none;
     box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
 }
 
 .grillasIndex {
@@ -200,7 +208,7 @@ body {
             background-blend-mode: soft-light;
             font-weight: 100;
             text-align: center;
-            padding: 1rem 2rem;
+            padding: 1rem 3rem;
             margin: 0;
             letter-spacing: 2px;
         }
@@ -224,3 +232,118 @@ body {
         }
     }
 }
+
+//proyectos//
+
+.grillasProyectos {
+    display: grid;
+    height: 100vh;
+    width: 100vw;
+    grid-template-columns: 100vw;
+    grid-template-rows: 1fr 7fr 2fr;
+    grid-template-areas:
+    "nav"
+    "card"
+    "footer";
+
+    @media screen and (min-width:$desktop) {
+        .grillasProyectos {
+            display: grid;
+            height: 100vh;
+            width: 100vw;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr 7fr 2fr;
+            grid-template-areas:
+            "nav nav nav nav"
+            "card card card card"
+            "footer footer footer footer";
+        }
+    }
+}
+
+//nosotros//
+
+.grillasNosotros {
+    display: grid;
+    height: 100vh;
+    width: 100vw;
+    grid-template-columns: 100vw;
+    grid-template-rows: 1fr 7fr 2fr;
+    grid-template-areas:
+    "nav"
+    "nosotros"
+    "footer";
+
+    @media screen and (min-width:$desktop) {
+        .grillasNosotros {
+            display: grid;
+            height: 100vh;
+            width: 100vw;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr 7fr 2fr;
+            grid-template-areas:
+            "nav nav nav nav"
+            "nosotros nosotros nosotros nosotros"
+            "footer footer footer footer";
+        }
+    }
+
+    .nosotros {
+        grid-area: nosotros;
+        width: 100vw;
+        height: 100%;
+    
+        .nosotrosImagen {
+            width: 100%;
+        }
+    }
+}
+
+//proyecto ada 28// 
+
+.grillasAda28 {
+    display: grid;
+    height: 100vh;
+    width: 100vw;
+    grid-template-columns: 100vw;
+    grid-template-rows: 1fr 7fr 2fr;
+    grid-template-areas:
+    "nav"
+    "ada28"
+    "footer";
+
+    @media screen and (min-width:$desktop) {
+        .grillasAda28 {
+            display: grid;
+            height: 100vh;
+            width: 100vw;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr 7fr 2fr;
+            grid-template-areas:
+            "nav nav nav nav"
+            "ada28 ada28 ada28 ada28"
+            "footer footer footer footer";
+        }
+    }
+
+    .ada28 {
+        grid-area: ada28;
+        display: flex;
+        flex-direction: column; 
+
+        .carouselImg {
+            width: 100%;
+        }
+        
+        .mapa {
+            width: 100%;
+            height: 20rem;
+            margin: 1rem 0;
+        }
+        
+    }
+}
+
+
+
+

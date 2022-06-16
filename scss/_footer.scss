@@ -42,3 +42,11 @@ body {
         }
     }
 }
+
+.footerForm {
+    margin-top: 8rem;
+
+    @media screen and (min-width:$desktop) {
+        margin-top: 0;
+    }
+}

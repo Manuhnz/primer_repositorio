@@ -1,4 +1,4 @@
-@import "variables";
+//cards proyectos//
 
 .card {
     border: 0;
@@ -17,7 +17,6 @@
     .card1,
     .card2 {
         padding: 1rem;
-        align-self: center;
         filter: $filter-bottom;
         animation: fadeIn;
         animation-duration: 2s;
@@ -76,7 +75,6 @@
                 @media screen and (min-width:#{$desktop}) {
                     &:hover {
                         background-color: $color-btn-hover;
-                        color: $color-negro;
                     }
                 }
 
@@ -104,6 +102,8 @@
     }
 }
 
+//cards blog// 
+
 .grillasBlog {
     display: grid;
     height: 100vh;
@@ -114,6 +114,21 @@
         "nav"
         "blog"
         "footer";
+
+
+    @media screen and (min-width:$desktop) {
+        .grillasBlog {
+            display: grid;
+            height: 100vh;
+            width: 100vw;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr 7fr 2fr;
+            grid-template-areas:
+                "nav nav nav nav"
+                "blog blog blog blog"
+                "footer footer footer footer";
+        }
+    }
 
     .blog {
         grid-area: blog;

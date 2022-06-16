@@ -1,0 +1,207 @@
+.grillasContactanos {
+    display: grid;
+    height: 100vh;
+    width: 100vw;
+    grid-template-columns: 100vw;
+    grid-template-rows: 1fr 7fr 2fr;
+    grid-template-areas:
+        "nav"
+        "formulario"
+        "footer";
+
+    @media screen and (min-width:$desktop) {
+        .grillasContactanos {
+            display: grid;
+            height: 100vh;
+            width: 100vw;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 7fr 2fr;
+            grid-template-areas:
+                "nav nav nav nav"
+                "form form form form"
+                "footer footer footer footer";
+        }
+    }
+}
+
+.bodyForm {
+    background-color: #35363A;
+
+    h2 {
+        display: none;
+
+        @media screen and (min-width:$desktop) {
+            display: block;
+            height: 3rem;
+        }
+    }
+
+    fieldset {
+        grid-area: form;
+        font-family: poppins;
+        font-size: 1rem;
+        line-height: 1.6rem;
+        margin: 1rem 0 0 0;
+        text-align: center;
+        border: 0px;
+
+        @media screen and (min-width:$desktop) {
+            grid-area: form;
+            display: flex;
+            flex-direction: row;
+            align-content: center;
+            background-image: url(../img/contact.png);
+            background-color: rgb(39, 39, 39);
+            background-blend-mode: soft-light;
+            background-size: cover;
+            width: 100vw;
+        }
+
+        .formTitulo {
+            font-family: anton;
+            font-size: 2rem;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 4.5px;
+            color: #FEF17F;
+            margin-top: 3rem;
+
+            @media screen and (min-width:$desktop) {
+                text-align: left;
+                margin-top: 5rem;
+                margin-left: 1rem;
+                margin-bottom: 1rem;
+            }
+        }
+
+        .formSubtitulo {
+            color: white;
+            font-family: poppins;
+            text-transform: uppercase;
+            font-weight: 200;
+            font-size: 1rem;
+            margin-top: 1rem;
+            letter-spacing: 0.9px;
+
+            @media screen and (min-width:$desktop) {
+                text-align: left;
+                margin: 0 1rem;
+                margin-right: 5rem;
+            }
+        }
+
+        .formTexto {
+            color: white;
+            padding: 0 3rem;
+
+            @media screen and (min-width:$desktop) {
+                padding: 1rem 0;
+            }
+        }
+
+        p {
+            @media screen and (min-width:$desktop) {
+                text-align: left;
+                margin: 0 1rem;
+                margin-right: 5rem;
+            }
+        }
+
+        .btnForm {
+            position: relative;
+            bottom: -17.7rem;
+            align-self: center;
+            width: 100%;
+
+            @media screen and (min-width:$desktop) {
+                text-align: left;
+                margin-left: 0.8rem;
+                position: relative;
+                bottom: 0;
+            }
+
+            .btnFormActivo {
+                width: 80%;
+                height: 2.5rem;
+                text-decoration: none;
+                background-color: #FEF17F;
+                border-radius: 10px;
+                border: 0;
+                font-family: anton;
+                font-size: 1rem;
+                text-transform: uppercase;
+                color: black;
+                margin-bottom: 0.5rem;
+                filter: $filter-bottom;
+
+                @media screen and (min-width:$desktop) {
+                    width: 30%;
+                    margin-right: 0.5rem;
+
+                    &:hover {
+                        background-color: $color-btn-hover;
+                    }
+                }
+            }
+
+            .btnFormInactivo {
+                width: 80%;
+                height: 2.5rem;
+                text-decoration: none;
+                background-color: #ffffff;
+                border-radius: 10px;
+                border: 0;
+                font-family: anton;
+                font-size: 1rem;
+                text-transform: uppercase;
+                color: rgb(163, 163, 163);
+                margin-bottom: 0.5rem;
+                filter: $filter-bottom;
+
+                @media screen and (min-width:$desktop) {
+                    width: 30%;
+                }
+            }
+        }
+
+        .formImput {
+            margin-bottom: 3rem;
+            margin-top: -6rem;
+
+            @media screen and (min-width:$desktop) {
+                width: 100%;
+                order: -1;
+                margin: 3rem;
+                align-self: center;
+            }
+
+            input {
+                font-family: poppins;
+                text-transform: uppercase;
+                font-size: 1rem;
+                letter-spacing: 2px;
+                color: #969696;
+                width: 80%;
+                height: 2.5rem;
+                margin: 4px;
+                padding: 8px 16px;
+                border-radius: 10px;
+                border: 1px solid rgb(194, 194, 194);
+            }
+
+            textarea {
+                font-family: poppins;
+                text-transform: uppercase;
+                font-size: 1rem;
+                letter-spacing: 2px;
+                color: #969696;
+                width: 80%;
+                height: 8rem;
+                margin: 4px;
+                padding: 8px 16px;
+                border-radius: 10px;
+                border: 1px solid rgb(194, 194, 194);
+            }
+        }
+    }
+}
