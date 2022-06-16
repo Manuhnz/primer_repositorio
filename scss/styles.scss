@@ -149,14 +149,13 @@ body {
                     bottom: -2rem;
                     top: 7rem;
                     width: 27rem;
-                    padding: 1.5rem 3rem 0 2.5rem;
+                    padding: 1.5rem 3rem 0 2rem;
                 }
             }
         }
 
         .proyecto {
             grid-area: proyecto;
-
             background-color: $color-primario;
             background-blend-mode: soft-light;
             background-size: cover;
@@ -182,7 +181,6 @@ body {
                 font-size: 1rem;
                 text-align: center;
                 padding: 1rem 0;
-                border-bottom: $color-acento solid 2px;
 
                 @media screen and (min-width:#{$desktop}) {
                     border-bottom: none;

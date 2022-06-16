@@ -579,7 +579,7 @@ body {
             bottom: -2rem;
             top: 7rem;
             width: 27rem;
-            padding: 1.5rem 3rem 0 2.5rem; } }
+            padding: 1.5rem 3rem 0 2rem; } }
     body main .proyecto {
       grid-area: proyecto;
       background-color: #202124;
@@ -602,8 +602,7 @@ body {
         font-weight: 400;
         font-size: 1rem;
         text-align: center;
-        padding: 1rem 0;
-        border-bottom: #FEF17F solid 2px; }
+        padding: 1rem 0; }
         @media screen and (min-width: 810px) {
           body main .proyecto h3 {
             border-bottom: none; } }
