@@ -1,3 +1,11 @@
+@import "variables";
+@import "mixins";
+
+@function color ($color-name) {
+    @return map-get($colors,$color-name);
+}
+
+
 .grillasContactanos {
     display: grid;
     height: 100vh;
@@ -9,7 +17,7 @@
         "formulario"
         "footer";
 
-    @media screen and (min-width:$desktop) {
+        @include desktop {
         .grillasContactanos {
             display: grid;
             height: 100vh;
@@ -25,14 +33,16 @@
 }
 
 .bodyForm {
-    background-color: #35363A;
+    background-color: color(secondary);
 
     h2 {
         display: none;
 
-        @media screen and (min-width:$desktop) {
+        @include desktop {
             display: block;
-            height: 3rem;
+            background-color: color(primary);
+            opacity: 85%;
+            height: 4rem;
         }
     }
 
@@ -45,16 +55,18 @@
         text-align: center;
         border: 0px;
 
-        @media screen and (min-width:$desktop) {
+        @include desktop {
             grid-area: form;
             display: flex;
             flex-direction: row;
             align-content: center;
             background-image: url(../img/contact.png);
-            background-color: rgb(39, 39, 39);
+            background-color:color(primary);
             background-blend-mode: soft-light;
             background-size: cover;
             width: 100vw;
+            height: 33rem;
+            margin-top: -4rem;
         }
 
         .formTitulo {
@@ -63,27 +75,27 @@
             font-weight: 400;
             text-transform: uppercase;
             letter-spacing: 4.5px;
-            color: #FEF17F;
+            color: color(tertiary);
             margin-top: 3rem;
 
-            @media screen and (min-width:$desktop) {
+            @include desktop {
                 text-align: left;
-                margin-top: 5rem;
+                margin-top: 9.5rem;
                 margin-left: 1rem;
                 margin-bottom: 1rem;
             }
         }
 
         .formSubtitulo {
-            color: white;
+            color: color(primary-light);
             font-family: poppins;
             text-transform: uppercase;
-            font-weight: 200;
+            font-weight: 300;
             font-size: 1rem;
             margin-top: 1rem;
             letter-spacing: 0.9px;
 
-            @media screen and (min-width:$desktop) {
+            @include desktop {
                 text-align: left;
                 margin: 0 1rem;
                 margin-right: 5rem;
@@ -91,16 +103,16 @@
         }
 
         .formTexto {
-            color: white;
+            color: color(primary-light);
             padding: 0 3rem;
 
-            @media screen and (min-width:$desktop) {
+            @include desktop {
                 padding: 1rem 0;
             }
         }
 
         p {
-            @media screen and (min-width:$desktop) {
+            @include desktop {
                 text-align: left;
                 margin: 0 1rem;
                 margin-right: 5rem;
@@ -113,7 +125,7 @@
             align-self: center;
             width: 100%;
 
-            @media screen and (min-width:$desktop) {
+            @include desktop {
                 text-align: left;
                 margin-left: 0.8rem;
                 position: relative;
@@ -124,22 +136,22 @@
                 width: 80%;
                 height: 2.5rem;
                 text-decoration: none;
-                background-color: #FEF17F;
+                background-color: color(tertiary);
                 border-radius: 10px;
                 border: 0;
                 font-family: anton;
                 font-size: 1rem;
                 text-transform: uppercase;
-                color: black;
+                color: color(primary-dark);
                 margin-bottom: 0.5rem;
-                filter: $filter-bottom;
+                filter: $shadow;
 
-                @media screen and (min-width:$desktop) {
+                @include desktop {
                     width: 30%;
                     margin-right: 0.5rem;
 
                     &:hover {
-                        background-color: $color-btn-hover;
+                        background-color: color(tertiary-dark);
                     }
                 }
             }
@@ -148,17 +160,17 @@
                 width: 80%;
                 height: 2.5rem;
                 text-decoration: none;
-                background-color: #ffffff;
+                background-color: color(primary-light);
                 border-radius: 10px;
                 border: 0;
                 font-family: anton;
                 font-size: 1rem;
                 text-transform: uppercase;
-                color: rgb(163, 163, 163);
+                color:color(secondary);
                 margin-bottom: 0.5rem;
-                filter: $filter-bottom;
+                filter: $shadow;
 
-                @media screen and (min-width:$desktop) {
+                @include desktop {
                     width: 30%;
                 }
             }
@@ -168,7 +180,7 @@
             margin-bottom: 3rem;
             margin-top: -6rem;
 
-            @media screen and (min-width:$desktop) {
+            @include desktop {
                 width: 100%;
                 order: -1;
                 margin: 3rem;
@@ -180,13 +192,13 @@
                 text-transform: uppercase;
                 font-size: 1rem;
                 letter-spacing: 2px;
-                color: #969696;
+                color: color(secondary);
                 width: 80%;
                 height: 2.5rem;
                 margin: 4px;
                 padding: 8px 16px;
                 border-radius: 10px;
-                border: 1px solid rgb(194, 194, 194);
+                border: 1px solid color(primary-light);
             }
 
             textarea {
@@ -194,13 +206,13 @@
                 text-transform: uppercase;
                 font-size: 1rem;
                 letter-spacing: 2px;
-                color: #969696;
+                color: color(secondary);
                 width: 80%;
                 height: 8rem;
                 margin: 4px;
                 padding: 8px 16px;
                 border-radius: 10px;
-                border: 1px solid rgb(194, 194, 194);
+                border: 1px solid color(primary-light);
             }
         }
     }

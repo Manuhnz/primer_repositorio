@@ -1,15 +1,20 @@
 @import "variables";
+@import "mixins";
+
+@function color ($color-name) {
+    @return map-get($colors,$color-name);
+}
 
 body {
     footer {
         grid-area: footer;
         width: 100vw;
         height: 15rem;
-        background-color: #202124;
-        color: white;
+        background-color: color(primary);
+        color: color(primary-light);
         margin-top: 5rem;
         text-align: center;
-        filter: $filter-top;
+        filter: $shadow-top;
         z-index: 1;
         bottom: 0;
 
@@ -37,7 +42,7 @@ body {
             address {
                 font-size: 0.6rem;
                 padding-bottom: 1rem;
-                background-color: #202124;
+                background-color: color(primary);
             }
         }
     }
@@ -46,7 +51,7 @@ body {
 .footerForm {
     margin-top: 8rem;
 
-    @media screen and (min-width:$desktop) {
+    @include desktop {
         margin-top: 0;
     }
 }

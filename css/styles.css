@@ -6,7 +6,7 @@ header {
   align-items: center;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.5));
   z-index: 3; }
-  @media screen and (min-width: 810px) {
+  @media (min-width: 810px) {
     header {
       border-bottom: 2px solid white; }
       header .centrarLogo {
@@ -30,7 +30,7 @@ header {
       color: white;
       margin-right: 1rem;
       cursor: pointer; }
-      @media screen and (min-width: 810px) {
+      @media (min-width: 810px) {
         header nav .navIcono {
           display: none; } }
     header nav .navMenu {
@@ -42,7 +42,7 @@ header {
       padding-left: 1rem;
       border-bottom: white solid 2px;
       transition: all .3s ease-in-out; }
-      @media screen and (min-width: 810px) {
+      @media (min-width: 810px) {
         header nav .navMenu {
           position: relative;
           height: 5.25rem;
@@ -56,7 +56,7 @@ header {
         line-height: 2rem;
         padding: 1rem;
         transition: all 4s; }
-        @media screen and (min-width: 810px) {
+        @media (min-width: 810px) {
           header nav .navMenu li {
             display: inline-block;
             line-height: 4rem;
@@ -67,7 +67,7 @@ header {
           font-family: poppins;
           font-weight: 400;
           text-decoration: none; }
-          @media screen and (min-width: 810px) {
+          @media (min-width: 810px) {
             header nav .navMenu li a {
               text-decoration: none;
               position: relative;
@@ -130,15 +130,14 @@ body footer {
 
 .footerForm {
   margin-top: 8rem; }
-  @media screen and (min-width: 810px) {
+  @media (min-width: 810px) {
     .footerForm {
       margin-top: 0; } }
 
 .card {
   border: 0;
-  margin-top: 2rem;
-  background-color: #EFEFEF; }
-  @media screen and (min-width: 810px) {
+  margin-top: 2rem; }
+  @media (min-width: 810px) {
     .card {
       grid-area: card;
       display: flex;
@@ -153,7 +152,7 @@ body footer {
     animation: fadeIn;
     animation-duration: 2s;
     width: 90%; }
-    @media screen and (min-width: 810px) {
+    @media (min-width: 810px) {
       .card .card1,
       .card .card2 {
         padding: 1rem;
@@ -167,7 +166,7 @@ body footer {
       font-weight: 500;
       text-align: center;
       padding: 1rem;
-      background-color: #ffffff;
+      background-color: white;
       border-radius: 1rem 1rem 0 0;
       width: 100%;
       margin: 0; }
@@ -182,8 +181,9 @@ body footer {
         width: 100%;
         border-radius: 0 0 1rem 1rem;
         align-self: center; }
-      .card .card1 .centrarBoton .btnActivo,
-      .card .card2 .centrarBoton .btnActivo {
+      .card .card1 .centrarBoton .btnActivo, .card .card1 .centrarBoton .btnInactivo,
+      .card .card2 .centrarBoton .btnActivo,
+      .card .card2 .centrarBoton .btnInactivo {
         position: absolute;
         align-content: space-around;
         width: 8rem;
@@ -196,32 +196,21 @@ body footer {
         font-family: anton;
         font-size: 1rem;
         text-transform: uppercase;
-        color: #000000;
+        color: black;
         margin: auto;
         display: block;
         filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.5));
         transition: all 0.2s ease-in-out; }
-        @media screen and (min-width: 810px) {
-          .card .card1 .centrarBoton .btnActivo:hover,
-          .card .card2 .centrarBoton .btnActivo:hover {
-            background-color: #b7ad5a; } }
+        @media (min-width: 810px) {
+          .card .card1 .centrarBoton .btnActivo:hover, .card .card1 .centrarBoton .btnInactivo:hover,
+          .card .card2 .centrarBoton .btnActivo:hover,
+          .card .card2 .centrarBoton .btnInactivo:hover {
+            background-color: #b6aa38; } }
       .card .card1 .centrarBoton .btnInactivo,
       .card .card2 .centrarBoton .btnInactivo {
-        position: absolute;
-        width: 8rem;
-        text-decoration: none;
-        text-align: center;
-        padding: 1rem;
-        background-color: #ffffff;
-        border-radius: 10px;
-        border: 0;
-        font-family: anton;
-        font-size: 1rem;
-        text-transform: uppercase;
-        color: #a3a3a3;
-        margin: auto;
-        display: block;
-        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.5)); }
+        background-color: white;
+        color: #35363A;
+        transition: none; }
 
 .grillasBlog {
   display: grid;
@@ -230,7 +219,7 @@ body footer {
   grid-template-columns: 100vw;
   grid-template-rows: 1fr 7fr 2fr;
   grid-template-areas: "nav" "blog" "footer"; }
-  @media screen and (min-width: 810px) {
+  @media (min-width: 810px) {
     .grillasBlog .grillasBlog {
       display: grid;
       height: 100vh;
@@ -252,7 +241,7 @@ body footer {
       filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.5));
       animation: fadeIn;
       animation-duration: 2s; }
-      @media screen and (min-width: 810px) {
+      @media (min-width: 810px) {
         .grillasBlog .blog .card {
           display: flex;
           flex-direction: row;
@@ -263,7 +252,7 @@ body footer {
           filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.5)); } }
       .grillasBlog .blog .card .card-img-top {
         border-radius: 1rem 1rem 0 0; }
-        @media screen and (min-width: 810px) {
+        @media (min-width: 810px) {
           .grillasBlog .blog .card .card-img-top {
             border-radius: 1rem 0 0 1rem;
             width: 50%;
@@ -271,17 +260,17 @@ body footer {
             object-position: top left; } }
       .grillasBlog .blog .card .card-body {
         padding: 0; }
-        @media screen and (min-width: 810px) {
+        @media (min-width: 810px) {
           .grillasBlog .blog .card .card-body {
             padding: 2rem 1rem; } }
-      @media screen and (min-width: 810px) {
+      @media (min-width: 810px) {
         .grillasBlog .blog .card .cardTitle {
           font-family: anton;
           font-size: 1.4rem;
           line-height: 2rem; } }
       .grillasBlog .blog .card .card-text {
         display: none; }
-        @media screen and (min-width: 810px) {
+        @media (min-width: 810px) {
           .grillasBlog .blog .card .card-text {
             display: inline-block; } }
       .grillasBlog .blog .card .btnBlogActivo {
@@ -302,8 +291,9 @@ body footer {
         margin: 1rem;
         filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.5));
         transition: all 0.2s ease-in-out; }
-        .grillasBlog .blog .card .btnBlogActivo:hover {
-          background-color: #b7ad5a; }
+        @media (min-width: 810px) {
+          .grillasBlog .blog .card .btnBlogActivo:hover {
+            background-color: #b6aa38; } }
 
 .grillasContactanos {
   display: grid;
@@ -312,7 +302,7 @@ body footer {
   grid-template-columns: 100vw;
   grid-template-rows: 1fr 7fr 2fr;
   grid-template-areas: "nav" "formulario" "footer"; }
-  @media screen and (min-width: 810px) {
+  @media (min-width: 810px) {
     .grillasContactanos .grillasContactanos {
       display: grid;
       height: 100vh;
@@ -325,10 +315,12 @@ body footer {
   background-color: #35363A; }
   .bodyForm h2 {
     display: none; }
-    @media screen and (min-width: 810px) {
+    @media (min-width: 810px) {
       .bodyForm h2 {
         display: block;
-        height: 3rem; } }
+        background-color: #202124;
+        opacity: 85%;
+        height: 4rem; } }
   .bodyForm fieldset {
     grid-area: form;
     font-family: poppins;
@@ -337,17 +329,19 @@ body footer {
     margin: 1rem 0 0 0;
     text-align: center;
     border: 0px; }
-    @media screen and (min-width: 810px) {
+    @media (min-width: 810px) {
       .bodyForm fieldset {
         grid-area: form;
         display: flex;
         flex-direction: row;
         align-content: center;
         background-image: url(../img/contact.png);
-        background-color: #272727;
+        background-color: #202124;
         background-blend-mode: soft-light;
         background-size: cover;
-        width: 100vw; } }
+        width: 100vw;
+        height: 33rem;
+        margin-top: -4rem; } }
     .bodyForm fieldset .formTitulo {
       font-family: anton;
       font-size: 2rem;
@@ -356,21 +350,21 @@ body footer {
       letter-spacing: 4.5px;
       color: #FEF17F;
       margin-top: 3rem; }
-      @media screen and (min-width: 810px) {
+      @media (min-width: 810px) {
         .bodyForm fieldset .formTitulo {
           text-align: left;
-          margin-top: 5rem;
+          margin-top: 9.5rem;
           margin-left: 1rem;
           margin-bottom: 1rem; } }
     .bodyForm fieldset .formSubtitulo {
       color: white;
       font-family: poppins;
       text-transform: uppercase;
-      font-weight: 200;
+      font-weight: 300;
       font-size: 1rem;
       margin-top: 1rem;
       letter-spacing: 0.9px; }
-      @media screen and (min-width: 810px) {
+      @media (min-width: 810px) {
         .bodyForm fieldset .formSubtitulo {
           text-align: left;
           margin: 0 1rem;
@@ -378,10 +372,10 @@ body footer {
     .bodyForm fieldset .formTexto {
       color: white;
       padding: 0 3rem; }
-      @media screen and (min-width: 810px) {
+      @media (min-width: 810px) {
         .bodyForm fieldset .formTexto {
           padding: 1rem 0; } }
-    @media screen and (min-width: 810px) {
+    @media (min-width: 810px) {
       .bodyForm fieldset p {
         text-align: left;
         margin: 0 1rem;
@@ -391,7 +385,7 @@ body footer {
       bottom: -17.7rem;
       align-self: center;
       width: 100%; }
-      @media screen and (min-width: 810px) {
+      @media (min-width: 810px) {
         .bodyForm fieldset .btnForm {
           text-align: left;
           margin-left: 0.8rem;
@@ -410,32 +404,32 @@ body footer {
         color: black;
         margin-bottom: 0.5rem;
         filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.5)); }
-        @media screen and (min-width: 810px) {
+        @media (min-width: 810px) {
           .bodyForm fieldset .btnForm .btnFormActivo {
             width: 30%;
             margin-right: 0.5rem; }
             .bodyForm fieldset .btnForm .btnFormActivo:hover {
-              background-color: #b7ad5a; } }
+              background-color: #b6aa38; } }
       .bodyForm fieldset .btnForm .btnFormInactivo {
         width: 80%;
         height: 2.5rem;
         text-decoration: none;
-        background-color: #ffffff;
+        background-color: white;
         border-radius: 10px;
         border: 0;
         font-family: anton;
         font-size: 1rem;
         text-transform: uppercase;
-        color: #a3a3a3;
+        color: #35363A;
         margin-bottom: 0.5rem;
         filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.5)); }
-        @media screen and (min-width: 810px) {
+        @media (min-width: 810px) {
           .bodyForm fieldset .btnForm .btnFormInactivo {
             width: 30%; } }
     .bodyForm fieldset .formImput {
       margin-bottom: 3rem;
       margin-top: -6rem; }
-      @media screen and (min-width: 810px) {
+      @media (min-width: 810px) {
         .bodyForm fieldset .formImput {
           width: 100%;
           order: -1;
@@ -446,25 +440,25 @@ body footer {
         text-transform: uppercase;
         font-size: 1rem;
         letter-spacing: 2px;
-        color: #969696;
+        color: #35363A;
         width: 80%;
         height: 2.5rem;
         margin: 4px;
         padding: 8px 16px;
         border-radius: 10px;
-        border: 1px solid #c2c2c2; }
+        border: 1px solid white; }
       .bodyForm fieldset .formImput textarea {
         font-family: poppins;
         text-transform: uppercase;
         font-size: 1rem;
         letter-spacing: 2px;
-        color: #969696;
+        color: #35363A;
         width: 80%;
         height: 8rem;
         margin: 4px;
         padding: 8px 16px;
         border-radius: 10px;
-        border: 1px solid #c2c2c2; }
+        border: 1px solid white; }
 
 * {
   margin: 0;
@@ -485,7 +479,7 @@ html, body {
   grid-template-columns: 100vw;
   grid-template-rows: 1fr 3fr 2fr 2fr 2fr;
   grid-template-areas: "nav" "portada" "proyecto" "card" "footer"; }
-  @media screen and (min-width: 810px) {
+  @media (min-width: 810px) {
     .grillasIndex {
       display: grid;
       height: 100vh;
@@ -496,13 +490,27 @@ html, body {
 
 body {
   display: grid;
-  background-color: #EFEFEF;
+  background-color: white;
   width: 100vw; }
   body main {
     padding-top: 5.25rem; }
+    body main .bg {
+      background-color: #202124;
+      opacity: 85%;
+      width: 100vw;
+      height: 25%;
+      position: absolute;
+      z-index: -1; }
+      @media (min-width: 810px) {
+        body main .bg {
+          width: 80rem;
+          height: 30rem;
+          right: -1rem;
+          clip-path: inset(0 0 0 65%);
+          z-index: 1; } }
     body main .portada {
       grid-area: portada; }
-      @media screen and (min-width: 810px) {
+      @media (min-width: 810px) {
         body main .portada {
           grid-area: portada;
           display: flex;
@@ -513,11 +521,10 @@ body {
           height: 30rem; } }
       body main .portada .portadaTitle {
         color: #FEF17F;
-        background-color: #35363A;
         text-align: center;
         text-transform: uppercase;
         padding: 0.5rem 0; }
-        @media screen and (min-width: 810px) {
+        @media (min-width: 810px) {
           body main .portada .portadaTitle {
             position: absolute;
             right: 0;
@@ -526,7 +533,6 @@ body {
             color: #FEF17F;
             align-content: center;
             text-transform: uppercase;
-            background-color: #35363A;
             padding-top: 2.5rem;
             z-index: 1; } }
         body main .portada .portadaTitle .portadaTitulo {
@@ -536,7 +542,7 @@ body {
           letter-spacing: 2px;
           line-height: 15px;
           padding-top: 2.5rem; }
-          @media screen and (min-width: 810px) {
+          @media (min-width: 810px) {
             body main .portada .portadaTitle .portadaTitulo {
               font-family: anton;
               font-weight: 100;
@@ -549,7 +555,7 @@ body {
           font-weight: 100;
           letter-spacing: 2.2px;
           font-size: 1.5rem; }
-          @media screen and (min-width: 810px) {
+          @media (min-width: 810px) {
             body main .portada .portadaTitle .portadaSubtitulo {
               font-family: anton;
               font-weight: 100;
@@ -559,42 +565,42 @@ body {
               text-align: left; } }
       body main .portada .portadaImg {
         width: 100vw;
-        object-fit: contain;
-        object-position: left;
-        z-index: 0; }
-        @media screen and (min-width: 810px) {
+        object-fit: contain; }
+        @media (min-width: 810px) {
           body main .portada .portadaImg {
             width: 100vw;
-            height: 30rem; } }
+            height: 30rem;
+            object-fit: cover;
+            object-position: left; } }
       body main .portada .portadaTexto {
-        color: #000000;
+        color: black;
         text-align: center;
         margin: 2rem 1rem; }
-        @media screen and (min-width: 810px) {
+        @media (min-width: 810px) {
           body main .portada .portadaTexto {
             position: absolute;
-            background-color: #35363A;
             color: white;
             right: -1rem;
             bottom: -2rem;
             top: 7rem;
             width: 27rem;
-            padding: 1.5rem 3rem 0 2rem; } }
+            padding: 1.5rem 3rem 0 2rem;
+            z-index: 1; } }
     body main .proyecto {
       grid-area: proyecto;
       background-color: #202124;
       background-blend-mode: soft-light;
       background-size: cover;
-      color: #ffffff;
+      color: white;
       padding: 1rem;
       text-align: center; }
-      @media screen and (min-width: 810px) {
+      @media (min-width: 810px) {
         body main .proyecto {
-          background-color: #EFEFEF; }
+          background-color: white; }
           body main .proyecto .proyectoTextos {
             grid-area: proyecto;
             margin: 4rem 0 0 0;
-            color: #000000; } }
+            color: black; } }
       body main .proyecto h3 {
         text-transform: uppercase;
         font-family: anton;
@@ -603,12 +609,12 @@ body {
         font-size: 1rem;
         text-align: center;
         padding: 1rem 0; }
-        @media screen and (min-width: 810px) {
+        @media (min-width: 810px) {
           body main .proyecto h3 {
             border-bottom: none; } }
       body main .proyecto .hide {
         display: none; }
-        @media screen and (min-width: 810px) {
+        @media (min-width: 810px) {
           body main .proyecto .hide {
             display: block; } }
     body main h2 {
@@ -616,14 +622,16 @@ body {
       letter-spacing: 2px;
       font-family: anton;
       font-size: 1.25rem;
-      color: #ffffff;
-      background-color: #35363A;
-      background-blend-mode: soft-light;
       font-weight: 100;
       text-align: center;
+      color: white;
+      background-color: #202124;
+      opacity: 85%;
+      height: 4rem;
       padding: 1rem 3rem;
       margin: 0;
-      letter-spacing: 2px; }
+      letter-spacing: 2px;
+      z-index: 1; }
     body main h6 {
       font-family: poppins;
       font-size: 0.87rem;
@@ -646,7 +654,7 @@ body {
   grid-template-columns: 100vw;
   grid-template-rows: 1fr 7fr 2fr;
   grid-template-areas: "nav" "card" "footer"; }
-  @media screen and (min-width: 810px) {
+  @media (min-width: 810px) {
     .grillasProyectos .grillasProyectos {
       display: grid;
       height: 100vh;
@@ -662,7 +670,7 @@ body {
   grid-template-columns: 100vw;
   grid-template-rows: 1fr 7fr 2fr;
   grid-template-areas: "nav" "nosotros" "footer"; }
-  @media screen and (min-width: 810px) {
+  @media (min-width: 810px) {
     .grillasNosotros .grillasNosotros {
       display: grid;
       height: 100vh;
@@ -675,7 +683,8 @@ body {
     width: 100vw;
     height: 100%; }
     .grillasNosotros .nosotros .nosotrosImagen {
-      width: 100%; }
+      width: 100%;
+      margin-top: -4rem; }
 
 .grillasAda28 {
   display: grid;
@@ -684,7 +693,7 @@ body {
   grid-template-columns: 100vw;
   grid-template-rows: 1fr 7fr 2fr;
   grid-template-areas: "nav" "ada28" "footer"; }
-  @media screen and (min-width: 810px) {
+  @media (min-width: 810px) {
     .grillasAda28 .grillasAda28 {
       display: grid;
       height: 100vh;
@@ -697,7 +706,9 @@ body {
     display: flex;
     flex-direction: column; }
     .grillasAda28 .ada28 .carouselImg {
-      width: 100%; }
+      width: 100%;
+      margin-top: -4rem;
+      z-index: 0; }
     .grillasAda28 .ada28 .mapa {
       width: 100%;
       height: 20rem;

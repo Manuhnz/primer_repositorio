@@ -3,6 +3,11 @@
 @import "cards";
 @import "formulario";
 @import "variables";
+@import "mixins";
+
+@function color ($color-name) {
+    @return map-get($colors,$color-name);
+}
 
 //index//
 
@@ -33,7 +38,7 @@ html, body {
         "card"
         "footer";
 
-    @media screen and (min-width:#{$desktop}) {
+    @include desktop {
         display: grid;
         height: 100vh;
         width: 100vw;
@@ -50,16 +55,33 @@ html, body {
 
 body {
     display: grid;
-    background-color: $color-fondo;
+    background-color: color(primary-light);
     width: 100vw;
 
     main {
         padding-top: 5.25rem;
 
+        .bg {
+            background-color: color(primary);
+            opacity: 85%;
+            width: 100vw;
+            height: 25%;
+            position: absolute;
+            z-index: -1;
+
+            @include desktop {
+                width: 80rem;
+                height: 30rem;
+                right: -1rem;
+                clip-path: inset(0 0 0 65%);
+                z-index: 1;
+            }
+        }
+
         .portada {
             grid-area: portada;
 
-            @media screen and (min-width:#{$desktop}) {
+            @include desktop {
                 grid-area: portada;
                 display: flex;
                 flex-direction: column;
@@ -70,21 +92,19 @@ body {
             }
 
             .portadaTitle {
-                color: $color-acento;
-                background-color: $color-secundario;
+                color: color(tertiary);
                 text-align: center;
                 text-transform: uppercase;
                 padding: 0.5rem 0;
 
-                @media screen and (min-width:#{$desktop}) {
+                @include desktop {
                     position: absolute;
                     right: 0;
                     top: 0;
                     width: 27rem;
-                    color: #FEF17F;
+                    color: color(tertiary);
                     align-content: center;
                     text-transform: uppercase;
-                    background-color: #35363A;
                     padding-top: 2.5rem;
                     z-index: 1;
                 }
@@ -97,7 +117,7 @@ body {
                     line-height: 15px;
                     padding-top: 2.5rem;
 
-                    @media screen and (min-width:#{$desktop}) {
+                    @include desktop {
                         font-family: anton;
                         font-weight: 100;
                         font-size: 2.2rem;
@@ -113,7 +133,7 @@ body {
                     letter-spacing: 2.2px;
                     font-size: 1.5rem;
 
-                    @media screen and (min-width:#{$desktop}) {
+                    @include desktop {
                         font-family: anton;
                         font-weight: 100;
                         letter-spacing: 1px;
@@ -127,49 +147,49 @@ body {
             .portadaImg {
                 width: 100vw;
                 object-fit: contain;
-                object-position: left;
-                z-index: 0;
 
-                @media screen and (min-width:#{$desktop}) {
+                @include desktop {
                     width: 100vw;
                     height: 30rem;
+                    object-fit: cover;
+                    object-position: left;
                 }
             }
 
             .portadaTexto {
-                color: $color-negro;
+                color: color(primary-dark);
                 text-align: center;
                 margin: 2rem 1rem;
 
-                @media screen and (min-width:#{$desktop}) {
+                @include desktop {
                     position: absolute;
-                    background-color: #35363A;
-                    color: white;
+                    color: color(primary-light);
                     right: -1rem;
                     bottom: -2rem;
                     top: 7rem;
                     width: 27rem;
                     padding: 1.5rem 3rem 0 2rem;
+                    z-index: 1;
                 }
             }
         }
 
         .proyecto {
             grid-area: proyecto;
-            background-color: $color-primario;
+            background-color: color(primary);
             background-blend-mode: soft-light;
             background-size: cover;
-            color: $color-blanco;
+            color: color(primary-light);
             padding: 1rem;
             text-align: center;
 
-            @media screen and (min-width:#{$desktop}) {
-                background-color: $color-fondo;
+            @include desktop {
+                background-color: color(primary-light);
 
                 .proyectoTextos {
                     grid-area: proyecto;
                     margin: 4rem 0 0 0;
-                    color: $color-negro;
+                    color: color(primary-dark);
                 }
             }
 
@@ -182,7 +202,7 @@ body {
                 text-align: center;
                 padding: 1rem 0;
 
-                @media screen and (min-width:#{$desktop}) {
+                @include desktop {
                     border-bottom: none;
                 }
             }
@@ -190,7 +210,7 @@ body {
             .hide {
                 display: none;
 
-                @media screen and (min-width:#{$desktop}) {
+                @include desktop {
                     display: block;
                 }
             }
@@ -201,14 +221,16 @@ body {
             letter-spacing: 2px;
             font-family: anton;
             font-size: 1.25rem;
-            color: $color-blanco;
-            background-color: $color-secundario;
-            background-blend-mode: soft-light;
             font-weight: 100;
             text-align: center;
+            color: color(primary-light);
+            background-color: color(primary);
+            opacity: 85%;
+            height: 4rem;
             padding: 1rem 3rem;
             margin: 0;
             letter-spacing: 2px;
+            z-index: 1;
         }
 
         h6 {
@@ -244,7 +266,7 @@ body {
     "card"
     "footer";
 
-    @media screen and (min-width:$desktop) {
+    @include desktop {
         .grillasProyectos {
             display: grid;
             height: 100vh;
@@ -272,7 +294,7 @@ body {
     "nosotros"
     "footer";
 
-    @media screen and (min-width:$desktop) {
+    @include desktop {
         .grillasNosotros {
             display: grid;
             height: 100vh;
@@ -293,6 +315,7 @@ body {
     
         .nosotrosImagen {
             width: 100%;
+            margin-top: -4rem;
         }
     }
 }
@@ -310,7 +333,7 @@ body {
     "ada28"
     "footer";
 
-    @media screen and (min-width:$desktop) {
+    @include desktop {
         .grillasAda28 {
             display: grid;
             height: 100vh;
@@ -331,6 +354,8 @@ body {
 
         .carouselImg {
             width: 100%;
+            margin-top: -4rem;
+            z-index: 0;
         }
         
         .mapa {
@@ -338,7 +363,6 @@ body {
             height: 20rem;
             margin: 1rem 0;
         }
-        
     }
 }
 

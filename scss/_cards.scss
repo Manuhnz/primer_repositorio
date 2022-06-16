@@ -1,11 +1,17 @@
-//cards proyectos//
+@import "variables";
+@import "mixins";
+
+@function color ($color-name) {
+    @return map-get($colors, $color-name);
+}
+
+//cards proyectos
 
 .card {
     border: 0;
     margin-top: 2rem;
-    background-color: $color-fondo;
 
-    @media screen and (min-width:#{$desktop}) {
+    @include desktop {
         grid-area: card;
         display: flex;
         flex-direction: row !important;
@@ -17,15 +23,15 @@
     .card1,
     .card2 {
         padding: 1rem;
-        filter: $filter-bottom;
+        filter: $shadow;
         animation: fadeIn;
         animation-duration: 2s;
         width: 90%;
 
-        @media screen and (min-width:#{$desktop}) {
+        @include desktop {
             padding: 1rem;
             align-self: center;
-            filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.5));
+            filter: $shadow;
             width: 50%;
         }
 
@@ -35,7 +41,7 @@
             font-weight: 500;
             text-align: center;
             padding: 1rem;
-            background-color: $color-blanco;
+            background-color: color(white);
             border-radius: 1rem 1rem 0 0;
             width: 100%;
             margin: 0;
@@ -60,49 +66,38 @@
                 text-decoration: none;
                 text-align: center;
                 padding: 1rem;
-                background-color: $color-acento;
+                background-color: color(tertiary);
                 border-radius: 10px;
                 border: 0;
                 font-family: anton;
                 font-size: 1rem;
                 text-transform: uppercase;
-                color: $color-negro;
+                color: color(primary-dark);
                 margin: auto;
                 display: block;
-                filter: $filter-bottom;
+                filter: $shadow;
                 transition: all 0.2s ease-in-out;
 
-                @media screen and (min-width:#{$desktop}) {
+                @include desktop {
                     &:hover {
-                        background-color: $color-btn-hover;
+                        background-color: color(tertiary-dark);
                     }
                 }
 
             }
 
             .btnInactivo {
-                position: absolute;
-                width: 8rem;
-                text-decoration: none;
-                text-align: center;
-                padding: 1rem;
-                background-color: $color-blanco;
-                border-radius: 10px;
-                border: 0;
-                font-family: anton;
-                font-size: 1rem;
-                text-transform: uppercase;
-                color: rgb(163, 163, 163);
-                margin: auto;
-                display: block;
-                filter: $filter-bottom;
+                @extend .btnActivo;
+                background-color: color(primary-light);
+                color: color(secondary);
+                transition: none;
             }
 
         }
     }
 }
 
-//cards blog// 
+//cards blog
 
 .grillasBlog {
     display: grid;
@@ -115,8 +110,7 @@
         "blog"
         "footer";
 
-
-    @media screen and (min-width:$desktop) {
+    @include desktop {
         .grillasBlog {
             display: grid;
             height: 100vh;
@@ -146,20 +140,20 @@
             animation: fadeIn;
             animation-duration: 2s;
 
-            @media screen and (min-width:#{$desktop}) {
+            @include desktop {
                 display: flex;
                 flex-direction: row;
                 align-self: center;
                 margin: 2rem 1rem;
                 padding: 0;
                 border-radius: 1rem;
-                filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.5));
+                filter: $shadow;
             }
 
             .card-img-top {
                 border-radius: 1rem 1rem 0 0;
 
-                @media screen and (min-width:#{$desktop}) {
+                @include desktop {
                     border-radius: 1rem 0 0 1rem;
                     width: 50%;
                     object-fit: cover;
@@ -170,13 +164,13 @@
             .card-body {
                 padding: 0;
 
-                @media screen and (min-width:#{$desktop}) {
+                @include desktop {
                     padding: 2rem 1rem;
                 }
             }
 
             .cardTitle {
-                @media screen and (min-width:#{$desktop}) {
+                @include desktop {
                     font-family: anton;
                     font-size: 1.4rem;
                     line-height: 2rem;
@@ -186,7 +180,7 @@
             .card-text {
                 display: none;
 
-                @media screen and (min-width:#{$desktop}) {
+                @include desktop {
                     display: inline-block;
                 }
             }
@@ -197,21 +191,23 @@
                 text-decoration: none;
                 text-align: center;
                 padding: 1rem;
-                background-color: #FEF17F;
+                background-color: color(tertiary);
                 border-radius: 10px;
                 border: 0;
                 font-family: anton;
                 font-size: 1rem;
                 text-transform: uppercase;
-                color: black;
+                color: color(primary-dark);
                 display: inline-block;
                 align-self: center;
                 margin: 1rem;
-                filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.5));
+                filter: $shadow;
                 transition: all 0.2s ease-in-out;
 
-                &:hover {
-                    background-color: $color-btn-hover;
+                @include desktop {
+                    &:hover {
+                        background-color: color(tertiary-dark);
+                    }
                 }
             }
         }
