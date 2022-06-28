@@ -617,6 +617,8 @@ body {
         @media (min-width: 810px) {
           body main .proyecto .hide {
             display: block; } }
+    body main .tituloCentrado {
+      padding-top: 1.3rem; }
     body main h2 {
       text-transform: uppercase;
       letter-spacing: 2px;
@@ -628,7 +630,7 @@ body {
       background-color: #202124;
       opacity: 85%;
       height: 4rem;
-      padding: 1rem 3rem;
+      padding: 1rem;
       margin: 0;
       letter-spacing: 2px;
       z-index: 1; }
@@ -707,7 +709,6 @@ body {
     flex-direction: column; }
     .grillasAda28 .ada28 .carouselImg {
       width: 100%;
-      margin-top: -4rem;
       z-index: 0; }
     .grillasAda28 .ada28 .mapa {
       width: 100%;

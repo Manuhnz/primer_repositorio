@@ -9,7 +9,6 @@
     @return map-get($colors,$color-name);
 }
 
-//index//
 
 * {
     margin: 0;
@@ -216,6 +215,10 @@ body {
             }
         }
 
+        .tituloCentrado {
+            padding-top: 1.3rem;
+        }
+
         h2 {
             text-transform: uppercase;
             letter-spacing: 2px;
@@ -227,7 +230,7 @@ body {
             background-color: color(primary);
             opacity: 85%;
             height: 4rem;
-            padding: 1rem 3rem;
+            padding: 1rem;
             margin: 0;
             letter-spacing: 2px;
             z-index: 1;
@@ -253,7 +256,7 @@ body {
     }
 }
 
-//proyectos//
+//pagina proyectos
 
 .grillasProyectos {
     display: grid;
@@ -281,7 +284,7 @@ body {
     }
 }
 
-//nosotros//
+//pagina nosotros
 
 .grillasNosotros {
     display: grid;
@@ -320,7 +323,7 @@ body {
     }
 }
 
-//proyecto ada 28// 
+//pagina proyecto ada 28 I
 
 .grillasAda28 {
     display: grid;
@@ -354,7 +357,6 @@ body {
 
         .carouselImg {
             width: 100%;
-            margin-top: -4rem;
             z-index: 0;
         }
         
