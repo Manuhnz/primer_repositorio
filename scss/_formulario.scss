@@ -2,7 +2,7 @@
 @import "mixins";
 
 @function color ($color-name) {
-    @return map-get($colors,$color-name);
+    @return map-get($colors, $color-name);
 }
 
 
@@ -17,7 +17,7 @@
         "formulario"
         "footer";
 
-        @include desktop {
+    @include desktop {
         .grillasContactanos {
             display: grid;
             height: 100vh;
@@ -61,7 +61,7 @@
             flex-direction: row;
             align-content: center;
             background-image: url(../img/contact.png);
-            background-color:color(primary);
+            background-color: color(primary);
             background-blend-mode: soft-light;
             background-size: cover;
             width: 100vw;
@@ -166,7 +166,7 @@
                 font-family: anton;
                 font-size: 1rem;
                 text-transform: uppercase;
-                color:color(secondary);
+                color: color(secondary);
                 margin-bottom: 0.5rem;
                 filter: $shadow;
 
